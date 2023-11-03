@@ -1,0 +1,1183 @@
+/* Estilos generales */
+@import url('https://fonts.cdnfonts.com/css/trade-gothic-lt-std');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: 'Trade Gothic LT Std', sans-serif;
+}
+
+/* Definición de variables CSS personalizadas */
+:root {
+  --primary-color: rgb(255, 255, 255);
+  --secondary-color: rgb(44, 44, 44);
+  --light-beige-color: rgb(245, 245, 245);
+  --grey-black-backroundcolor: #111111;
+  --grey-black-hover-color: rgba(38, 37, 37, 0.8);
+  --grey-text-color: #817a73;
+  --grey-button-color: rgb(235, 232, 232);
+  --grey-button-hover-color: rgb(211, 210, 210);
+  --footer-text-grey-color: rgb(101, 101, 103);
+  --footer-background-color: rgb(17, 17, 17);
+  --spacing: 30px;
+  font-family: Arial, Arial, Helvetica, sans-serif;
+
+  /* SPACINGS */
+  --margin-xs: 10px;
+  --margin-s: 20px;
+  --margin-m: 30px;
+  --margin-l: 40px;
+  --margin-xl: 50px;
+  --margin-xxl: 60px;
+
+  --padding-xxs: 5px;
+  --padding-xs: 10px;
+  --padding-s: 20px;
+  --padding-m: 30px;
+  --padding-l: 40px;
+  --padding-xl: 50px;
+  --padding-xxl: 60px;
+
+  --gap-xs: 10px;
+  --gap-s: 20px;
+  --gap-m: 30px;
+  --gap-l: 40px;
+  --gap-xl: 50px;
+  --gap-xxl: 60px;
+
+  /* BORDER RADIUS */
+  --border-radius: 25px;
+  --border-radius-circle: 100%;
+
+  --font-size-xs: 8px;
+  --font-size-s: 10px;
+  --font-size-ms: 12px;
+  --font-size-m: 15px;
+  --font-size-ml: 18px;
+  --font-size-l: 25px;
+  --font-size-xl: 30px;
+  --font-size-xxl: 50px;
+  --font-size-xxxl: 60px;
+
+  /* filter */
+  --icon-grey: invert(50%) sepia(9%) saturate(340%) hue-rotate(349deg)
+    brightness(94%) contrast(91%);
+}
+
+.grid-container {
+  display: grid;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+}
+
+/* Pre-brand header------------------------------------------------------ */
+
+.pre-brand-header {
+  display: grid;
+  grid-template-columns: 150px max-content;
+  padding: var(--padding-s);
+  justify-content: space-between;
+  gap: 30%;
+  height: fit-content;
+  padding: var(--padding-xs) 0px 0px 0px;
+  background-color: var(--light-beige-color);
+}
+.logo {
+  width: 90px;
+  justify-content: space-between;
+  align-content: center;
+  margin-left: 20px;
+}
+
+.logo li {
+  gap: var(--gap-xl);
+}
+
+.logo li a img {
+  width: 38px;
+  object-fit: contain;
+}
+
+.converse-logo {
+  margin-top: 5px;
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+}
+
+.user-menu {
+  width: 100%;
+}
+
+.user-menu ul {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  width: min-content;
+  justify-content: space-between;
+  gap: var(--gap-s);
+  align-items: center;
+  margin-right: 50px;
+  font-weight: 600;
+}
+
+.user-menu ul li {
+  display: flex;
+  align-items: center;
+  width: max-content;
+}
+.user-menu a {
+  color: var(--secondary-color);
+  font-size: 12px;
+}
+
+.user-menu a:hover {
+  color: var(--grey-text-color);
+}
+
+.vertical-line {
+  display: inline-block;
+  width: 1px;
+  height: 15px;
+  background-color: var(--secondary-color);
+}
+
+/* Page header ---------------------------------------------------------- */
+
+.page-header {
+  display: grid;
+  grid-template-columns: 150px 3fr 0.1fr;
+  height: 30px;
+  justify-content: space-around;
+  height: 60px;
+}
+
+.header-icon:hover {
+  filter: var(--icon-grey);
+}
+
+.nike-logo a img {
+  width: 60px;
+  position: relative;
+}
+
+.nav-page-header {
+  display: grid;
+  grid-template-columns: 1fr 250px;
+  width: 90%;
+  justify-items: center;
+  justify-self: end;
+  align-items: center;
+}
+
+.page-menu {
+  display: flex;
+  flex-direction: row;
+  width: 500px;
+  justify-content: space-evenly;
+}
+
+.page-menu li a {
+  color: var(--secondary-color);
+  font-weight: 560;
+}
+
+.page-menu li a:hover {
+  text-decoration: underline;
+  text-underline-offset: 16px;
+}
+
+.search a img {
+  width: 25px;
+  padding: 4px;
+  margin-top: 3px;
+}
+
+.search {
+  display: flex;
+  background-color: var(--light-beige-color);
+  border-radius: var(--border-radius);
+  align-items: center;
+  padding: 4px 8px;
+}
+
+.search input {
+  background-color: var(--light-beige-color);
+  height: 25px;
+  margin: 2px;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  width: 150px;
+}
+
+.header-button-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 80px;
+  justify-content: space-around;
+  justify-self: end;
+  margin-right: 30px;
+}
+
+.header-button-group a img {
+  width: 20px;
+}
+
+.heart a img {
+  width: 28px;
+}
+
+.header-button-group div:hover {
+  filter: var(--icon-grey);
+}
+
+.menu {
+  width: 22px;
+  padding-top: 4px;
+  display: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+}
+
+.menu > img {
+  width: 80%;
+}
+
+#checkbox {
+  display: none;
+}
+
+#checkbox:checked ~ nav {
+  width: 50%;
+}
+
+/* Media query for header--------------------------------------------------------- */
+
+@media (max-width: 1062px) {
+  .pre-brand-header,
+  .search,
+  .header-button-group {
+    display: none;
+  }
+
+  .search input {
+    display: none;
+  }
+
+  .search {
+    background-color: var(--primary-color);
+  }
+
+  .page-header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 var(--padding-l);
+  }
+
+  .nav-page-header {
+    width: 10px;
+    padding-bottom: 2px;
+  }
+
+  .nav-page-header > nav {
+    position: absolute;
+    height: 100svh;
+    top: 0;
+    right: 0;
+    width: 0;
+    overflow: hidden;
+    background-color: var(--primary-color);
+    transition: all 0.5s;
+  }
+
+  nav .page-menu {
+    padding-top: 100px;
+    width: 70%;
+  }
+
+  .page-menu li {
+    text-align: left;
+  }
+
+  .page-menu li a {
+    color: var(--secondary-color);
+    font-size: var(--font-size-l);
+    width: max-content;
+  }
+
+  .page-menu {
+    display: grid;
+    gap: 40px;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 1fr);
+    justify-items: left;
+    margin-left: 20%;
+    height: 60%;
+  }
+
+  .menu {
+    display: block;
+  }
+}
+
+/* News banner ---------------------------------------------------------- */
+main section {
+  margin-bottom: 16px;
+}
+
+.news {
+  background-color: var(--light-beige-color);
+  text-align: center;
+}
+
+.news h2 {
+  font-size: var(--font-size-l);
+  color: var(--secondary-color);
+  padding-top: var(--padding-xs);
+  padding-bottom: var(--padding-xxs);
+  font-weight: 200;
+}
+
+.news div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 3px;
+  padding-bottom: var(--padding-xs);
+}
+
+.news p {
+  color: var(--grey-text-color);
+  font-size: var(--font-size-m);
+}
+
+.news a {
+  font-size: var(--font-size-s);
+  color: var(--secondary-color);
+  align-self: flex-end;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+/* Discount banner--------------------------------------------------------------------- */
+
+.discount {
+  height: 250px, auto;
+  gap: 20px;
+}
+
+.background-discount {
+  background-image: url(./assets/background-rainbow.jpg);
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.discount article {
+  margin: 0 20px;
+}
+
+.discount h2 {
+  font-size: var(--font-size-xxl);
+  text-transform: uppercase;
+  font-weight: 750;
+  padding: var(--padding-m);
+}
+
+.discount-buttons {
+  padding: var(--padding-m);
+}
+
+.discount-buttons button {
+  border-radius: var(--border-radius);
+  padding: var(--padding-xs) var(--padding-s);
+  font-size: var(--font-size-m);
+  border: none;
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+  font-weight: 550;
+  cursor: pointer;
+}
+
+.discount-buttons button:hover {
+  background-color: var(--grey-black-hover-color);
+}
+
+/* Keep running------------------------------------------------------- */
+
+.backround-running {
+  background-image: url(./assets/running-shoes.jpg);
+  display: flex;
+  justify-content: flex-end;
+}
+
+.keep-running {
+  height: 550px;
+  min-height: fit-content;
+}
+
+.keep-running a {
+  height: 100%;
+  width: 100%;
+  padding: var(--padding-xxl);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.keep-running p {
+  color: var(--primary-color);
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.keep-running h3 {
+  font-size: var(--font-size-xxxl);
+  color: var(--primary-color);
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: var(--margin-m);
+}
+
+.keep-running-button {
+  padding: var(--padding-xs) var(--padding-s);
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  border: none;
+  border-radius: var(--border-radius);
+  font-size: var(--font-size-m);
+  cursor: pointer;
+}
+
+.keep-running-button:hover {
+  background-color: var(--grey-button-hover-color);
+}
+
+.background-discount,
+.backround-running {
+  background-size: cover;
+  background-position: center;
+}
+
+/* standard settings for small image carousels----------------------------------------- */
+.container-carousel-small {
+  display: grid;
+  margin: 0px var(--margin-xl);
+  margin-top: var(--margin-s);
+}
+
+.section-title {
+  grid-area: title;
+  align-self: center;
+  padding: var(--padding-s);
+  font-size: var(--font-size-l);
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+.carousel-small {
+  grid-area: carousel;
+  display: flex;
+  flex-direction: row;
+  gap: var(--gap-s);
+  overflow: hidden;
+}
+
+.carousel-footer {
+  grid-area: footer;
+  display: flex;
+  justify-content: center;
+  padding: var(--padding-xs);
+  font-weight: 200;
+  font-size: var(--font-size-m);
+  color: var(--grey-text-color);
+}
+
+/* Carousel button settings below --------------------------------------------------------- */
+.carousel-scroll-buttons button {
+  position: absolute;
+  background-color: var(--primary-color);
+  padding: var(--padding-xxs);
+  border-radius: var(--border-radius-circle);
+  font-size: var(--font-size-m);
+  border: none;
+  font-weight: 600;
+  width: 35px;
+  height: 35px;
+  z-index: 2;
+}
+
+.carousel-scroll-buttons button:hover {
+  cursor: pointer;
+}
+
+.carousel-button-left {
+  left: 4rem;
+  margin-top: 130px;
+}
+
+.carousel-button-right {
+  right: 4rem;
+  margin-top: 130px;
+}
+
+.slide {
+  height: 300px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  object-fit: cover;
+}
+
+.slide img {
+  max-width: 300px;
+}
+
+/* Carousel settings above ------------------------ */
+
+/* All products carousel--------------------------------------------------------------- */
+
+.all-products {
+  grid-template:
+    'carousel' minmax(400px, 500px)
+    'footer' auto / 1fr;
+}
+
+/* Weekly trends carousel--------------------------------------------------------------- */
+
+.trends {
+  display: grid;
+  grid-template:
+    'title' auto
+    'carousel' minmax(20vw, min-content) / 100%;
+  margin-left: 40px;
+}
+
+.trends-heading {
+  grid-area: title;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.trends-heading > div {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-s);
+  padding-right: var(--padding-m);
+  height: fit-content;
+}
+
+.trends-heading button {
+  width: 48px;
+  height: 48px;
+  background-color: var(--grey-button-color);
+  border-radius: var(--border-radius-circle);
+  border: none;
+  font-size: var(--font-size-l);
+}
+
+.trends-heading button:hover {
+  background-color: var(--grey-button-hover-color);
+}
+
+.trends-card-container {
+  grid-area: carousel;
+  display: flex;
+  overflow: hidden;
+  gap: var(--gap-s);
+  height: fit-content;
+}
+
+.trends-card img {
+  min-height: 50%;
+  max-width: 450px;
+  object-fit: cover;
+}
+
+.trends-card p {
+  font-weight: 600;
+}
+
+.trends-card > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.trends-description {
+  align-items: left;
+  padding: var(--padding-xs) 0;
+}
+
+.trends-description h4 {
+  padding-bottom: var(--padding-xs);
+  font-weight: 500;
+}
+
+.trends-description > p {
+  color: var(--grey-text-color);
+}
+
+/* Iconic shoes carousel------------------------------------------------------- */
+
+.iconic-shoes {
+  grid-template:
+    'title' auto
+    'carousel' minmax(300px, max-content) / 1fr;
+  margin: 0 40px;
+}
+
+.iconic-shoes h3 {
+  padding-left: 0;
+}
+
+.iconic-shoes-carousel p {
+  text-align: center;
+  position: relative;
+  bottom: 35px;
+  color: var(--secondary-color);
+  font-weight: 600;
+}
+
+/* Discover more cards----------------------------------------------- */
+
+.discover-more {
+  grid-template:
+    'title' auto
+    'carousel' minmax(500px, max-content) / 1fr;
+  margin: 20px 45px 0 45px;
+}
+
+.discover-more h3 {
+  padding-left: 0;
+}
+
+.discover-more-container {
+  grid-area: carousel;
+  display: flex;
+  flex-direction: row;
+  min-height: 500px;
+  max-height: auto;
+  width: 100%;
+  gap: 20px;
+  overflow: hidden;
+}
+
+.discover-more-container div {
+  width: 100%;
+  min-width: 230px;
+}
+
+.discover-more-photo {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.discover-more-buttons {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  bottom: 120px;
+  left: 40px;
+}
+
+.target-buyers,
+.eye-icon {
+  font-weight: 600;
+  border: none;
+  border-radius: var(--border-radius);
+  background-color: var(--primary-color);
+  height: 40px;
+  color: var(--grey-text-color);
+  font-size: var(--font-size-m);
+  width: fit-content;
+  padding: 0 var(--padding-s);
+}
+
+.target-buyers:hover,
+.eye-icon:hover {
+  cursor: pointer;
+  background-color: var(--grey-button-color);
+}
+
+.target-buyers {
+  margin-bottom: var(--margin-xs);
+}
+
+.eye-icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.eye-icon span {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-xs);
+}
+
+.eye-icon img {
+  width: 30px;
+  filter: var(--icon-grey);
+}
+
+/* Search by sport carousel--------------------------------------------- */
+
+.search-by-sport {
+  grid-template:
+    'title' auto
+    'carousel' minmax(300px, max-content)
+    'footer' auto / 1fr;
+  overflow: hidden;
+}
+
+.search-by-sport img {
+  min-width: auto;
+}
+
+.search-by-sport img {
+  filter: grayscale(100%);
+}
+
+/* Discover our apps----------------------------------------------------------- */
+
+.discover-our-apps {
+  grid-template:
+    'title ' auto
+    'carousel' minmax(200px, max-content) / 1fr;
+  margin: 0 40px;
+}
+
+.discover-our-apps h3 {
+  padding-left: 0;
+}
+
+.discover-our-apps article {
+  width: 100%;
+}
+
+.discover-our-apps article {
+  display: flex;
+  flex-direction: row;
+  grid-area: carousel;
+  gap: 20px;
+  width: 100%;
+}
+
+.discover-our-apps-photo {
+  width: 100%;
+  height: 300px;
+}
+
+.our-apps-img {
+  height: 100%;
+  width: 100%;
+  min-width: 300px;
+  object-fit: cover;
+}
+
+.discover-our-apps-buttons {
+  position: relative;
+  bottom: 50%;
+  left: 10%;
+  height: fit-content;
+  width: 30vw;
+}
+
+.discover-our-apps-buttons .dark-background {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.discover-our-apps-buttons p {
+  color: var(--primary-color);
+  font-size: var(--font-size-l);
+  margin-bottom: var(--margin-xs);
+  background-color: rgba(0, 0, 0, 0.4);
+  width: max-content;
+  padding: var(--padding-xs);
+  border-radius: var(--border-radius);
+}
+
+.discover-our-apps-buttons button {
+  font-weight: 600;
+  border: none;
+  border-radius: var(--border-radius);
+  background-color: var(--primary-color);
+  height: 40px;
+  color: var(--grey-text-color);
+  font-size: var(--font-size-m);
+  width: fit-content;
+  padding: 0 var(--padding-s);
+  margin-left: var(--margin-s);
+}
+
+.discover-our-apps-buttons button:hover {
+  cursor: pointer;
+  background-color: var(--grey-button-color);
+}
+
+/* Nike membership carousel---------------------------------------------------- */
+
+.nike-membership {
+  grid-template:
+    'title title' auto
+    'carousel' minmax(200px, max-content)
+    'footer' auto/ 1fr;
+  overflow: hidden;
+}
+
+/* Merchandise menu--------------------------------------------------------- */
+
+.merch-menu {
+  display: flex;
+  justify-content: center;
+}
+
+.merch-menu article {
+  display: flex;
+  justify-content: space-between;
+  align-items: top;
+  flex-direction: row;
+  padding: var(--padding-xl);
+  min-width: 900px;
+}
+
+.merch-menu-list li {
+  padding-top: var(--padding-xs);
+  font-size: var(--font-size-m);
+  font-weight: 500;
+}
+.merch-menu-list a {
+  color: var(--grey-text-color);
+}
+.merch-menu-list a:hover {
+  color: var(--secondary-color);
+}
+
+.list-titles {
+  font-weight: 500;
+  padding: var(--font-size-m) 0px;
+}
+
+/* Principal footer---------------------------------------------------------- */
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--footer-background-color);
+}
+
+footer > div {
+  width: 88%;
+}
+
+.principal-footer {
+  display: flex;
+  flex-direction: row;
+}
+
+.principal-footer-lists {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: var(--padding-l);
+  padding-bottom: var(--padding-s);
+  gap: var(--gap-xl);
+}
+
+.principal-footer-lists a {
+  color: var(--footer-text-grey-color);
+}
+
+.principal-footer-lists a:hover {
+  color: var(--primary-color);
+}
+
+.footer-lists-white,
+.footer-lists-white li {
+  margin-bottom: var(--margin-xs);
+}
+
+.footer-lists-white a {
+  color: var(--primary-color);
+  text-transform: uppercase;
+  font-size: var(--font-size-ms);
+  font-weight: 600;
+}
+
+.footer-lists-grey li {
+  margin-bottom: var(--margin-xs);
+  font-size: var(--font-size-ms);
+}
+
+.social-media {
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  justify-content: end;
+}
+
+.social-media ul {
+  display: flex;
+  flex-direction: row;
+  margin-top: 40px;
+  gap: 20px;
+}
+
+.social-media li {
+  width: 30px;
+  height: 30px;
+  background-color: var(--footer-text-grey-color);
+  border-radius: var(--border-radius-circle);
+}
+
+.social-media li:hover {
+  background-color: var(--primary-color);
+}
+
+.social-media-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.twitter,
+.instagram {
+  width: 30px;
+}
+
+.facebook,
+.youtube {
+  width: 20px;
+}
+
+/* sub footer-------------------------------------------------------------- */
+
+.sub-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.sub-footer section {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.rights {
+  display: flex;
+  flex-direction: row;
+  gap: var(--gap-m);
+}
+
+.rights a,
+.rights p {
+  color: var(--primary-color);
+  width: fit-content;
+  height: fit-content;
+  align-self: flex-end;
+  padding-bottom: var(--padding-s);
+  font-size: var(--font-size-s);
+}
+
+.rights img {
+  width: 15px;
+  filter: grayscale(100%) invert(100%);
+}
+
+.terms {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: var(--padding-s) 0px;
+}
+
+.terms li {
+  font-size: var(--font-size-ms);
+}
+
+.terms a,
+.cookies a {
+  color: var(--grey-text-color);
+}
+
+.terms a:hover,
+.cookies a:hover {
+  color: var(--primary-color);
+}
+
+.cookies p {
+  font-size: var(--font-size-ms);
+  padding-bottom: var(--padding-s);
+  text-align: end;
+}
+
+/* main and footer media query--------------------------- */
+@media (max-width: 1062px) {
+  .carousel-button-left,
+  .carousel-button-right,
+  .trends-heading > .trends-buttons,
+  .trends button {
+    display: none;
+  }
+
+  .all-products,
+  .trends,
+  .discover-more,
+  .search-by-sport,
+  .nike-membership {
+    margin-right: var(--margin-l);
+    margin-left: var(--margin-l);
+  }
+
+  .trends-heading > h3 {
+    margin-top: 0;
+  }
+
+  .trends-heading > h3,
+  .search-by-sport > h3 {
+    padding: var(--padding-s) 0px;
+  }
+
+  .discover-our-apps {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .discover-our-apps h3 {
+    width: 100%;
+  }
+
+  .discover-our-apps article {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .discover-our-apps p {
+    width: fit-content;
+  }
+
+  .discover-our-apps-buttons {
+    left: 10%;
+    width: 60vw;
+  }
+
+  .all-products ul,
+  .trends-card-container,
+  .iconic-shoes ul,
+  .discover-more-container,
+  .search-by-sport ul,
+  .nike-membership ul {
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .merch-menu {
+    width: 100vw;
+    justify-content: flex-start;
+  }
+  .merch-menu > article {
+    flex-direction: column;
+    padding: var(--padding-s);
+    width: fit-content;
+    min-width: 0;
+    align-items: left;
+  }
+
+  .merch-menu-list ul {
+    display: none;
+  }
+
+  .merch-menu-list h4 {
+    padding: var(--padding-s);
+  }
+
+  footer {
+    width: 100%;
+  }
+
+  .footer-organising-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-left: var(--padding-l);
+  }
+
+  .principal-footer {
+    flex-direction: column;
+  }
+
+  .principal-footer-lists > .footer-lists-white {
+    border-bottom: solid 1px var(--grey-text-color);
+    padding-bottom: var(--padding-m);
+  }
+
+  .footer-lists-grey li {
+    display: none;
+  }
+
+  .footer-lists-grey > .footer-lists-white {
+    display: block;
+    margin: 0;
+  }
+
+  .principal-footer-lists {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-s);
+  }
+
+  .social-media {
+    justify-content: start;
+    padding-bottom: var(--padding-m);
+  }
+
+  .social-media ul {
+    margin-top: var(--margin-s);
+  }
+
+  .sub-footer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .rights {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .rights a,
+  .rights p {
+    align-self: flex-start;
+  }
+
+  .terms {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-xs);
+  }
+
+  .cookies p {
+    text-align: start;
+  }
+}
