@@ -8,6 +8,7 @@
   text-decoration: none;
   list-style: none;
   font-family: 'Trade Gothic LT Std', sans-serif;
+  scroll-behavior: smooth;
 }
 
 /* Definición de variables CSS personalizadas */
@@ -149,8 +150,6 @@
   background-color: var(--secondary-color);
 }
 
-/* Page header ---------------------------------------------------------- */
-
 .page-header {
   display: grid;
   grid-template-columns: 150px 3fr 0.1fr;
@@ -261,8 +260,6 @@
   width: 50%;
 }
 
-/* Media query for header--------------------------------------------------------- */
-
 @media (max-width: 1062px) {
   .pre-brand-header,
   .search,
@@ -270,8 +267,14 @@
     display: none;
   }
 
+  .page-header {
+    position: sticky;
+    top: 0;
+  }
+
   .search input {
     display: none;
+    top: 0;
   }
 
   .search {
@@ -331,7 +334,6 @@
   }
 }
 
-/* News banner ---------------------------------------------------------- */
 main section {
   margin-bottom: 16px;
 }
@@ -369,8 +371,6 @@ main section {
   text-decoration: underline;
   font-weight: 600;
 }
-
-/* Discount banner--------------------------------------------------------------------- */
 
 .discount {
   height: 250px, auto;
@@ -413,8 +413,6 @@ main section {
 .discount-buttons button:hover {
   background-color: var(--grey-black-hover-color);
 }
-
-/* Keep running------------------------------------------------------- */
 
 .backround-running {
   background-image: url(./assets/running-shoes.jpg);
